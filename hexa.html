@@ -1,0 +1,58 @@
+<!-- Criado por Marise Miranda | 2017.1 -->
+<!-- Adaptado por Matheus Matos | 2025.1 -->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPTecher's Machine</title>
+     <style>
+        button:hover{
+            background: #fdbaff;
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0; background-image: url(fundo.jpg);">
+    <center>
+         <header style="margin: 0; background-color: #781b77; width: 100%; padding: 20px 0; background-image: linear-gradient(to right, #781b77, #000022 );">
+        <h1 style="color: white;">SPTecher's Machine 💻</h1>
+        </header>
+        <h2 style="color: #ece3ff;">HEXADECIMAL</h2>
+
+        <h3 style="color: #ece3ff;">Digite um número hexadecimal:</h3>
+        <input id="hex" type="text" placeholder="Ex: A7">
+        <br><br>
+
+        <button style="background-color: #fea50e; color: white; width: 100px; border-radius: 20px;" onclick="converter()"><b>CONVERTER</b></button>
+
+        <h3 style="color: white;">RESULTADOS:</h3>
+        <p style="color: white;">OCTAL:
+        <div id="demo2"></div>
+        </p>
+        <p style="color: white;">DECIMAL:
+        <div id="demo3"></div>
+        </p>
+        <p style="color: white;">BINÁRIO:
+        <div id="demo4"></div>
+        </p>
+        <button style="border-radius: 20PX; text-decoration: none;"><a href="octal.html">OCTAL</a></button>
+        <button style="border-radius: 20PX; text-decoration: none;"><a href="sptechers-machine.html">DECIMAL</a></button>
+        <button style="border-radius: 20PX; text-decoration: none;"><a href="bin.html">BIN</a></button>
+    </center>
+
+    <script>
+        function converter() {
+            let hexa = hex.value;
+            let decimal = parseInt(hexa, 16)
+
+            demo2.innerHTML = `<p style = "color:  #FFFF33;"><b>${decimal.toString(8)}</b></p>`;
+            demo3.innerHTML = `<p style = "color:  #FFFF33;"><b>${decimal.toString(10)}</b></p>`;
+            demo4.innerHTML = `<p style = "color:  #FFFF33;"><b>${decimal.toString(2)}</b></p>`;
+        }
+    </script>
+</body>
+
+</html>
