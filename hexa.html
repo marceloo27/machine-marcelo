@@ -7,23 +7,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPTecher's Machine</title>
+    <title>Marcelo's Machine</title>
      <style>
         button:hover{
             background: #fdbaff;
+            transform: scale(1.05);
         }
+        @keyframes surgindo {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            animation: surgindo 0.8s ease-out;
+        }
+
     </style>
 </head>
 
 <body style="margin: 0; padding: 0; background-image: url(fundo.jpg);">
     <center>
-         <header style="margin: 0; background-color: #781b77; width: 100%; padding: 20px 0; background-image: linear-gradient(to right, #781b77, #000022 );">
-        <h1 style="color: white;">SPTecher's Machine 💻</h1>
+        <header style="margin: 0; background-color: #781b77; width: 100%; padding: 20px 0; background-image: linear-gradient(to right, #781b77, #000022 );">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+            <h1 style="color: white;"><b>Marcelo's Machine 💻</b></h1>
+            <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.3/dist/dotlottie-wc.js" type="module"></script>
+            <dotlottie-wc src="https://lottie.host/3c88fb01-1896-40e4-b6ce-6ba8b526f6f4/8Sjbp6yN3h.lottie" style="width: 100px;height: 100px" autoplay loop></dotlottie-wc>
+        </div>
         </header>
+        <div class="container">
         <h2 style="color: #ece3ff;">HEXADECIMAL</h2>
 
         <h3 style="color: #ece3ff;">Digite um número hexadecimal:</h3>
-        <input id="hex" type="text" placeholder="Ex: A7">
+        <input style=" width: 70px;height: 10px; padding: 10px; border-radius: 20px; border: none; font-size: 15px; margin-bottom: 5px; outline: none;" id="hex" type="text" placeholder="Ex: A7">
         <br><br>
 
         <button style="background-color: #fea50e; color: white; width: 100px; border-radius: 20px;" onclick="converter()"><b>CONVERTER</b></button>
@@ -39,9 +54,13 @@
         <div id="demo4"></div>
         </p>
         <button style="border-radius: 20PX; text-decoration: none;"><a href="octal.html">OCTAL</a></button>
-        <button style="border-radius: 20PX; text-decoration: none;"><a href="sptechers-machine.html">DECIMAL</a></button>
+        <button style="border-radius: 20PX; text-decoration: none;"><a href="index.html">DECIMAL</a></button>
         <button style="border-radius: 20PX; text-decoration: none;"><a href="bin.html">BIN</a></button>
+        </div>
     </center>
+    <footer style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #2c002b; color: white; text-align: center; padding: 10px 0; font-family: sans-serif;">
+        Desenvolvido por Marcelo &copy; CCOB-2026
+    </footer>
 
     <script>
         function converter() {
